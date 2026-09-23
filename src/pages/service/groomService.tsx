@@ -1,8 +1,13 @@
+import { useState } from "react";
 import { useServicePets } from './groomService.condition'
+import ServiceDialog from './serviceDialog'
 export default function GroomService(){
     const {
         services
     } = useServicePets()
+
+    const [ openModalServ , setOpenModalServ ] = useState(false)
+
     return (
         <div className="p-6 ">
             <div className="text-center max-w-2xl mx-auto flex flex-col gap-3">
@@ -11,7 +16,7 @@ export default function GroomService(){
                 <p className="text-stone-600 text-base sm:text-lg">Choose from our comprehensive menu designed to keep your pet healthy, clean, and stylish.</p>
             </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ">
                 {services.map((s, idx) => (
                     <div key={idx} className="bg-stone-50 hover:bg-orange-50/30 border border-stone-200 hover:border-orange-300 p-6 rounded-3xl transition-all duration-300 flex flex-col justify-between group shadow-sm hover:shadow-md">
                         <div className="flex flex-col gap-4">
@@ -23,12 +28,15 @@ export default function GroomService(){
                         </div>
                         <div className="pt-6 mt-6 border-t border-stone-200/60 flex items-center justify-between">
                             <span className="text-xs text-stone-500 font-medium bg-stone-200/60 px-2.5 py-1 rounded-lg">{s.duration}</span>
-                            {/* <span className="font-bold text-orange-600 text-base">{s.price}</span> */}
+                            <span className="font-bold text-orange-600 text-base">{s.price}</span>
+                            <button onClick={() => setOpenModalServ(true)} className='border p-1 rounded border-stone-400 text-sm bg-orange-200 cursor-pointer active:scale-95 active:shadow-inner'>Select Service</button>
                         </div>
                     </div>
                 ))}
             </div>
             <div className='border-b py-6 border-stone-200 shadow-xs'></div>
+
+            <ServiceDialog openModalServ={openModalServ} onCloseModal={() => setOpenModalServ(false)} />
         </div>
     )
 }
