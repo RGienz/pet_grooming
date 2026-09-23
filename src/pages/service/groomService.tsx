@@ -23,7 +23,7 @@ export default function GroomService(){
                         </div>
                         <div className="pt-6 mt-6 border-t border-stone-200/60 flex items-center justify-between">
                             <span className="text-xs text-stone-500 font-medium bg-stone-200/60 px-2.5 py-1 rounded-lg">{s.duration}</span>
-                            <span className="font-bold text-orange-600 text-base">{s.price}</span>
+                            {/* <span className="font-bold text-orange-600 text-base">{s.price}</span> */}
                         </div>
                     </div>
                 ))}
