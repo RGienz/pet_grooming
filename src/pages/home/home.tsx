@@ -11,7 +11,7 @@ export default function Home() {
             <section className="px-4 py-10 sm:px-6 sm:py-14 md:px-10 lg:px-16 xl:px-24 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 ">
                <div className="flex flex-col">
                     <div className="leading-none whitespace-nowrap">
-                        <span className="text-[58px] font-bold sm:text-[80px] md:text-[110px] lg:text-[145px] xl:text-[180px]">
+                        <span className="text-[58px] font-bold sm:text-[80px] md:text-[110px] lg:text-[145px] xl:text-[140px] 2xl:text-[180px]">
                         Give
                         </span>{" "}
                         <span className="text-[58px] sm:text-[80px] md:text-[110px] lg:text-[145px] xl:text-[180px]">
