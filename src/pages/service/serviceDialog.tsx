@@ -24,7 +24,7 @@ export default function ServiceDialog(props : serviceModalProps){
                                 name="client_name" 
                                 type="text" 
                                 placeholder="e.g. Lu Coza" 
-                                className="w-full px-3.5 py-2.5 border border-stone-300 rounded-xl text-stone-800 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm" 
+                                className="w-full px-3.5 py-2.5 border border-stone-400 rounded-xl text-stone-800 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm" 
                             />
                         </div>
 
@@ -34,7 +34,7 @@ export default function ServiceDialog(props : serviceModalProps){
                                 name="pet_name" 
                                 type="text" 
                                 placeholder="e.g. Max" 
-                                className="w-full px-3.5 py-2.5 border border-stone-300 rounded-xl text-stone-800 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm" 
+                                className="w-full px-3.5 py-2.5 border border-stone-400 rounded-xl text-stone-800 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm" 
                             />
                         </div>
 
@@ -44,7 +44,7 @@ export default function ServiceDialog(props : serviceModalProps){
                                 name="breed" 
                                 type="text" 
                                 placeholder="e.g. Golden Retriever" 
-                                className="w-full px-3.5 py-2.5 border border-stone-300 rounded-xl text-stone-800 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm" 
+                                className="w-full px-3.5 py-2.5 border border-stone-400 rounded-xl text-stone-800 placeholder:text-stone-400 focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm" 
                             />
                         </div>
 
@@ -52,7 +52,7 @@ export default function ServiceDialog(props : serviceModalProps){
                             <label className="block text-xs font-bold uppercase tracking-wider text-stone-600 mb-1.5">Pet's Size</label>
                             <select 
                                 name="pet_size" 
-                                className="w-full px-3.5 py-2.5 border border-stone-300 rounded-xl text-stone-800 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm cursor-pointer"
+                                className="w-full px-3.5 py-2.5 border border-stone-400 rounded-xl text-stone-800 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500 focus:border-transparent text-sm cursor-pointer"
                             >
                                 <option value="">Select size</option>
                                 <option value="small">Small (0 - 25 lbs)</option>
