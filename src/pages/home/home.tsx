@@ -2,70 +2,67 @@ import { useState } from "react";
 import AppointmentDialog from './dialog'
 
 export default function Home() {
-
     const [isDialogOpen, setIsDialogOpen] = useState(false)
-
 
     return (
         <div className="w-full overflow-hidden border-b border-stone-300 py-6">
-            <section className="px-4 py-10 sm:px-6 sm:py-14 md:px-10 lg:px-16 xl:px-24 flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-8 ">
-               <div className="flex flex-col">
+            <section className="max-w-7xl mx-auto px-4 py-8 sm:px-6 sm:py-12 md:px-10 lg:px-12 flex flex-col lg:flex-row items-center justify-between gap-8 lg:gap-12">
+               
+               {/* Left Text Container (Untouched) */}
+               <div className="flex flex-col shrink-0">
                     <div className="leading-none whitespace-nowrap">
-                        <span className="text-[58px] font-bold sm:text-[80px] md:text-[110px] lg:text-[145px] xl:text-[140px] 2xl:text-[180px]">
+                        <span className="text-[72px] font-bold sm:text-[70px] lg:text-[90px] xl:text-[150px]">
                         Give
                         </span>{" "}
-                        <span className="text-[58px] sm:text-[80px] md:text-[110px] lg:text-[145px] xl:text-[180px]">
+                        <span className="text-[62px] sm:text-[70px] lg:text-[90px] xl:text-[150px]">
                         L<span className="text-red-400">♡</span>ve
                         </span>
                     </div>
             
-                    <div className="leading-none">
-                        <span className="text-[42px] font-bold sm:text-[55px] md:text-[70px] lg:text-[90px] xl:text-[110px]">
+                    <div className="leading-none my-1">
+                        <span className="text-[32px] font-bold sm:text-[50px] lg:text-[65px] xl:text-[80px]">
                         To Your
                         </span>
                     </div>
             
                     <div className="leading-none whitespace-nowrap">
-                        <span className="text-[58px] sm:text-[80px] md:text-[110px] lg:text-[145px] xl:text-[180px]">
+                        <span className="text-[62px] sm:text-[70px] lg:text-[90px] xl:text-[150px]">
                         L<span className="text-red-400">♡</span>ve
                         </span>{" "}
-                        <span className="text-[90px] sm:text-[130px] md:text-[180px] lg:text-[235px] xl:text-[290px]">
+                        <span className="text-[60px] sm:text-[100px] lg:text-[140px] xl:text-[170px]">
                         Pet
                         </span>
                     </div>
-
-                    {/* <div className="mt-6 mb-2">
-                        <button className="border px-6 py-3 text-lg sm:text-xl rounded-xl font-bold active:scale-95 cursor-pointer bg-orange-400 hover:bg-orange-500 text-white shadow-lg transition-all">
-                            Make An Appointment
-                        </button>
-                    </div> */}
                </div>
 
-
-               <div className="w-full lg:w-auto flex justify-center relative">
-                  <div className="overflow-hidden rounded-3xl shadow-md">
-                      <img 
+               {/* Right Image Container with Centered Button */}
+               <div className="w-full lg:w-auto flex flex-col items-center relative mt-6 lg:mt-0">
+                  <div className="overflow-hidden rounded-3xl shadow-md relative">
+                      {/* <img 
                           src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.muttzwithmannerz.com%2Fwp-content%2Fuploads%2F2019%2F09%2FDog-Grooming-Muttz-with-Mannerz-Stouffville-Markham.jpg&f=1&nofb=1&ipt=bc1928658ad41d8d77fead503e060a5fe59fc55aba459e2e3753c686f855abbd" 
                           alt="Happy dog getting groomed"
-                          className="w-full max-w-md lg:max-w-lg xl:max-w-xl h-[300px] sm:h-[400px] lg:h-[600px] object-cover"
+                          className="w-full max-w-sm sm:max-w-md lg:max-w-sm xl:max-w-md h-[350px] sm:h-[450px] lg:h-[500px] object-cover"
+                      /> */}
+                      <img 
+                          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKAvv17kiuQEKWZB8H-r4D4skEbd4uX40eC0P0k5gO-Mz3576UR1rUqyEi&s=10" 
+                          alt="Happy dog getting groomed"
+                          className="w-full max-w-sm sm:max-w-md lg:max-w-sm xl:max-w-md h-[350px] sm:h-[450px] lg:h-[500px] object-cover"
                       />
-
                       
+                      {/* Horizontally centered button overlaying the bottom section of the image */}
+                      {/* <div className="absolute bottom-6 left-1/2 -translate-x-1/2 w-11/12 max-w-[280px] sm:max-w-xs flex justify-center">
+                          <button 
+                              onClick={() => setIsDialogOpen(true)}
+                              className="w-full py-3.5 text-base sm:text-lg rounded-2xl font-bold active:scale-95 cursor-pointer bg-orange-500 text-white hover:bg-orange-600 shadow-2xl border-2 border-white transition-all duration-300 text-center"
+                          >
+                              Make An Appointment 🐾
+                          </button>
+                      </div> */}
                   </div>
-
-                  <div className="absolute -bottom-6 sm:-bottom-8 lg:bottom-6 right-4 sm:right-8">
-                      <button  className="px-6 py-4 text-lg sm:text-xl rounded-2xl font-bold active:scale-95 cursor-pointer bg-orange-200 text-stone-900 hover:bg-orange-500 hover:text-white shadow-2xl border border-stone-200 transition-all duration-300">
-                          Make An Appointment 🐾
-                      </button>
-                  </div>
-                  
-              </div>
+               </div>
             </section>
 
             <AppointmentDialog openModal={isDialogOpen} onCloseModal={() => setIsDialogOpen(false)} />
-
-              
         </div>
     );
-  }
-  
+}
