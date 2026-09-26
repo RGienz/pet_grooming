@@ -9,4 +9,13 @@ export default defineConfig({
     tailwindcss(),
     babel({ presets: [reactCompilerPreset()] })
   ],
+  server: {
+    host: '0.0.0.0',
+    port: 4522,
+
+    allowedHosts: [
+      'testing_api',
+      'ASUS'
+    ]
+  }
 })
