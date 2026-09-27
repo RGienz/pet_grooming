@@ -63,7 +63,7 @@ export default function Drawer(){
 
             {/* Main Sections */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-24 space-y-16 pt-8">
-                <section id="home" className="scroll-mt-24">
+                {/* <section id="home" className="scroll-mt-24">
                     <HomePage />
                 </section>
                 <section id="service" className="scroll-mt-24">
@@ -71,7 +71,7 @@ export default function Drawer(){
                 </section>
                 <section id="style" className="scroll-mt-24">
                     <Style />
-                </section>
+                </section> */}
             </main>
         </div>
     )
