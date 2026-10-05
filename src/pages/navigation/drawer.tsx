@@ -1,13 +1,13 @@
-import { useDrawerState } from './drawer.condition'
+// import { useDrawerState } from './drawer.condition'
 import HomePage from '../home/home'
 import Style from '../groom/groomStyle'
 import Service from '../service/groomService'
 
 export default function Drawer(){
-    const {
-        openMenuSelection,
-        toggleDrawer
-    } = useDrawerState()
+    // const {
+    //     openMenuSelection,
+    //     toggleDrawer
+    // } = useDrawerState()
 
     return (
         <div className="w-full bg-stone-50 relative min-h-screen">
@@ -35,11 +35,11 @@ export default function Drawer(){
 
                 {/* Right Side (Mobile): Login Button & Toggle Menu */}
                 <div className='md:hidden flex items-center gap-2'>
-                    <button className="px-3 py-1.5 rounded-lg border border-orange-200 bg-orange-50 font-semibold text-xs text-orange-600 shadow-xs">
+                    <button className="px-3 py-1.5 rounded-lg border border-orange-200 bg-orange-50 font-semibold text-xs text-orange-600 shadow-xs cursor-pointer hover:bg-orange-100 transition-all">
                         Login
                     </button>
                     
-                    <button 
+                    {/* <button 
                         onClick={toggleDrawer} 
                         className="p-2 text-stone-600 hover:text-stone-900 focus:outline-none cursor-pointer" 
                         aria-label="Toggle Menu"
@@ -47,19 +47,19 @@ export default function Drawer(){
                         <svg className="w-6 h-6 pointer-events-none" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
                             <path strokeLinecap="round" strokeLinejoin="round" d={openMenuSelection ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16m-7 6h7"} />
                         </svg>
-                    </button>
+                    </button> */}
                 </div>
             </header>
 
             {/* Mobile Dropdown Menu Drawer */}
-            {openMenuSelection && (
+            {/* {openMenuSelection && (
                 <div className="md:hidden bg-white border-b border-stone-200 px-6 py-4 flex flex-col gap-3 shadow-md z-35 fixed top-[65px] left-0 w-full animate-fadeIn">
                     <a href="#service" onClick={toggleDrawer} className="text-[18px] text-stone-600 font-semibold py-1 hover:text-orange-500">Services</a>
                     <a href="#style" onClick={toggleDrawer} className="text-[18px] text-stone-600 font-semibold py-1 hover:text-orange-500">Grooming Style</a>
                     <div className="text-[18px] text-stone-400 font-semibold py-1">Location</div>
                     <div className="text-[18px] text-stone-400 font-semibold py-1">About Us</div>
                 </div>
-            )}
+            )} */}
 
             {/* Main Sections */}
             <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 pb-24 space-y-16 pt-8">
