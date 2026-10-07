@@ -36,12 +36,12 @@ export function dialogAppointment(props: DialogProps){
             service : '',
             date : '',
         },
-        {
-            name : 'test 3',
-            petName : 'Askal',
-            service : '',
-            date : '',
-        },
+        // {
+        //     name : 'test 3',
+        //     petName : 'Askal',
+        //     service : '',
+        //     date : '',
+        // },
     ]
 
    
